@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff6ec4, #7873f5, #42e695);
+    background-size: 300% 300%;
+    animation: gradientMove 8s infinite alternate;
+}
+
+@keyframes gradientMove {
+    0% { background-position: left; }
+    100% { background-position: right; }
+}
+
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    width: 350px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #ff4081;
+}
+
+.time {
+    font-size: 40px;
+    margin: 20px 0;
+    font-weight: bold;
+    color: #333;
+    background: linear-gradient(90deg, #ff6ec4, #7873f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+    transition: 0.3s;
+}
+
+#start {
+    background: linear-gradient(to right, #00c853, #64dd17);
+}
+
+#pause {
+    background: linear-gradient(to right, #ff9800, #ff5722);
+}
+
+#reset {
+    background: linear-gradient(to right, #d50000, #ff1744);
+}
+
+button:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .time {
+        font-size: 32px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
